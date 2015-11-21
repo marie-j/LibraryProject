@@ -1,0 +1,30 @@
+<h1>Welcome to your library</h1>
+
+<div class="choose">
+
+	<form action="#" id="library-form" ng-submit="add">
+		<input type="text" id="title" placeholder="Title" ng-model="newTitle" autofocus autocomplete="off">
+		<input type="text" id="author" placeholder="Author" ng-model="newAuthor" autofocus autocomplete="off">
+		<button class="like" ng-click="like"></button>
+		<button class="unlike" ng-click="unlike"></button>
+	</form>
+</div>
+
+<div class="display">
+	<section id ="display">
+
+		<ul id="booksList">
+
+			<li ng-repeat="b in books">
+				<div class="view">
+
+					<label>{{b.title}}</label>
+					<label>{{b.author}}</label>
+					<span ng-class="{'icon-like':b.like,'icon-unlike':!b.like}"></span>
+					<span class="icon-delete" ng-click="removeBook"></span>
+				</div>
+			</li>
+		</ul>
+	</section>
+
+</div>
