@@ -4,9 +4,12 @@ library.controller('bookCtrl', ['$scope', function($scope){
 
 	$scope.books = [];
 
-	$scope.add = function() {
-		$scope.books.push({ 
-			title:$scope.newTitle,
+	$scope.addLiked = function(e) {
+
+		e.preventDefault();
+
+		$scope.books.push({
+			title : $scope.newTitle,
 			author : $scope.newAuthor,
 			like : true
 		});
@@ -14,7 +17,10 @@ library.controller('bookCtrl', ['$scope', function($scope){
 		$scope.newAuthor='';
 	}
 
-	$scope.addUnliked = function() {
+	$scope.addUnliked = function(e) {
+
+		e.preventDefault();
+
 		$scope.books.push({
 			title : $scope.newTitle,
 			author : $scope.newAuthor,

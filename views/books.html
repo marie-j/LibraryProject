@@ -5,8 +5,8 @@
 	<form action="#" id="library-form" ng-submit="add">
 		<input type="text" id="title" placeholder="Title" ng-model="newTitle" autofocus autocomplete="off">
 		<input type="text" id="author" placeholder="Author" ng-model="newAuthor" autofocus autocomplete="off">
-		<button class="like" ng-click="like"></button>
-		<button class="unlike" ng-click="unlike"></button>
+		<button class="like" ng-click="addLiked($event)"></button>
+		<button class="unlike" ng-click="addUnliked($event)"></button>
 	</form>
 </div>
 
